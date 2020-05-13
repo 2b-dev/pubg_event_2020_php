@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PUBG</title>
+	<meta name="description" content="PUBG" />
+	<meta name="keywords" content="PUBG" />
+	<meta name="author" content="Nu Chaimongkon" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/animations.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mdb.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mdb.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="js/modernizr-custom.js"></script>
+
+</head>
+
+<body>
+	<p class="info info--size">เปิดบนจอขนาดใหญ่ เพื่อรับชมรูปแบบ 3 มิติ<br>(View on a larger screen to see the 3D
+		display)</p>
+	<p class="info info--support">Your browser does not support preserve-3d!</p>
+	<p class="landscap-txt"><span>รับชมในแนวนอน</span> <br>(Watch in landscape)</p>
+	<div class="contain-slideshow">
+		<div class="for-absolute information_slideshow">
+			<!--Information-->
+			<div id="information" class="slideshow">
+				<div class="slide">
+					<div class="scene">
+						<div class="views">
+							<div class="view">
+								<img class="view__img" src="./img/information/a.jpg" />
+							</div>
+							<div class="view view--rotate view--rotate-left">
+								<img class="view__img" src="./img/information/b.jpg" />
+								<div class="item item--information">
+									<a data-toggle="modal" data-target="#information_modal">
+										<img class="item__img" src="./img/information/box-information.png"
+											data-transform-z="90" />
+									</a>
+									<div class="item__info">
+									</div>
+									<button class="button button--close"><i class="icon icon--close"></i><span
+											class="text-hidden">Close</span></button>
+								</div>
+								<div class="item item--to-live">
+									<a onclick="open_frontlive();">
+										<img class="item__img" src="./img/information/box_to_live.png"
+											data-transform-z="90" />
+									</a>
+									<div class="item__info">
+									</div>
+									<button class="button button--close"><i class="icon icon--close"></i><span
+											class="text-hidden">Close</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<nav class="nav" style="display: none;">
+					<a href="#" class="nav__item"><span class="text-hidden">Information Hall</span></a>
+				</nav>
+				<div class="titles">
+					<h2 class="title">Information <span class="title__sub">Zone</span></h2>
+				</div>
+				<div class="tab-navigation tab-navigation-left">
+					<a onclick="informationToShop();" class="btn-nav btn-nav-left">
+						<div class="box-arrow">
+						</div>
+						<p>PREDATOR SHOP</p>
+					</a>
+				</div>
+				<div class="tab-navigation tab-navigation-right">
+					<a onclick="informationToVideo();" class="btn-nav btn-nav-right">
+						<div class="box-arrow">
+						</div>
+						<p>TVC SCREEN</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="for-absolute front_live_slideshow">
+			<!--Front Live-->
+			<div id="front_live" class="slideshow">
+				<div class="slide">
+					<div class="scene">
+						<div class="views">
+							<div class="view">
+								<img class="view__img" src="./img/frontlive/a.jpg" />
+							</div>
+							<div class="view view--rotate view--rotate-left">
+								<img class="view__img" src="./img/frontlive/b.jpg" />
+								<div class="item item--openlive">
+									<a data-toggle="modal" data-target="#open_live_modal">
+										<img class="item__img" src="./img/frontlive/box_live_play.png"
+											data-transform-z="90" />
+									</a>
+									<div class="item__info">
+									</div>
+									<button class="button button--close"><i class="icon icon--close"></i><span
+											class="text-hidden">Close</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<nav class="nav" style="display: none;">
+					<a href="#" class="nav__item"><span class="text-hidden">Front Live</span></a>
+				</nav>
+				<div class="titles">
+					<h2 class="title">Front Live<span class="title__sub">Zone</span></h2>
+				</div>
+				<div class="tab-navigation tab-navigation-bottom">
+					<a onclick="front_liveToInformation();" class="btn-nav btn-nav-bottom">
+						<p>INFORMATION</p>
+						<div class="box-arrow">
+
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="for-absolute shop_slideshow">
+			<!--Shop-->
+			<div id="predatorshop" class="slideshow">
+				<div class="slide">
+					<div class="scene">
+						<div class="views">
+							<div class="view">
+								<img class="view__img" src="./img/shop/a.jpg" />
+							</div>
+							<div class="view view--rotate view--rotate-left">
+								<img class="view__img" src="./img/shop/b.jpg" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<nav class="nav" style="display: none;">
+					<a href="#" class="nav__item"><span class="text-hidden">Information Hall</span></a>
+				</nav>
+				<div class="titles">
+					<h2 class="title">Information <span class="title__sub">Zone</span></h2>
+				</div>
+				<div class="tab-navigation tab-navigation-right">
+					<a onclick="shopToInformation();" class="btn-nav btn-nav-right">
+						<div class="box-arrow">
+						</div>
+						<p>INFORMATION</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="for-absolute tvscreen_slideshow">
+			<!--Shop-->
+			<div id="tvscreen" class="slideshow">
+				<div class="slide">
+					<div class="scene">
+						<div class="views">
+							<div class="view">
+								<img class="view__img" src="./img/tvscreen/a.jpg" />
+							</div>
+							<div class="view view--rotate view--rotate-left">
+								<img class="view__img" src="./img/tvscreen/b.jpg" />
+								<div class="item item--link1">
+									<a data-fancybox="video" href="https://www.youtube.com/watch?v=nsCAbCmTNUY">
+										<img class="item__img" src="./img/tvscreen/link1.png" data-transform-z="90" />
+									</a>
+									<div class="item__info">
+									</div>
+									<button class="button button--close"><i class="icon icon--close"></i><span
+											class="text-hidden">Close</span></button>
+								</div>
+								<div class="item item--link2">
+									<a data-fancybox="video" href="https://www.youtube.com/watch?v=Hsr6qxpmfJw">
+										<img class="item__img" src="./img/tvscreen/link2.png" data-transform-z="90" />
+									</a>
+									<div class="item__info">
+									</div>
+									<button class="button button--close"><i class="icon icon--close"></i><span
+											class="text-hidden">Close</span></button>
+								</div>
+								<div class="item item--link3">
+									<a data-fancybox="video" href="https://www.youtube.com/watch?v=tw3CzQzUwgk">
+										<img class="item__img" src="./img/tvscreen/link3.png" data-transform-z="90" />
+									</a>
+									<div class="item__info">
+									</div>
+									<button class="button button--close"><i class="icon icon--close"></i><span
+											class="text-hidden">Close</span></button>
+								</div>
+								<div class="item item--link4">
+									<a data-fancybox="video" href="https://www.youtube.com/watch?v=5EMLVw7iMyM">
+										<img class="item__img" src="./img/tvscreen/link4.png" data-transform-z="90" />
+									</a>
+									<div class="item__info">
+									</div>
+									<button class="button button--close"><i class="icon icon--close"></i><span
+											class="text-hidden">Close</span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<nav class="nav" style="display: none;">
+					<a href="#" class="nav__item"><span class="text-hidden">Information Hall</span></a>
+				</nav>
+				<div class="titles">
+					<h2 class="title">Information <span class="title__sub">Zone</span></h2>
+				</div>
+				<div class="tab-navigation tab-navigation-left">
+					<a onclick="tvscreenToInformation();" class="btn-nav btn-nav-left">
+						<div class="box-arrow">
+						</div>
+						<p>INFORMATION</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="information_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog full-screen" role="document">
+			<div class="modal-content">
+				<div class="box-register">
+					<p class="title-register">INFORMATION</p>
+					<ul class="ul-list-infomation">
+						<li>
+							<a data-fancybox="agenda" href="./img/information/agenda.png">PUBG LIVE AGENDA</a>
+						</li>
+						<li>
+							<a href="#">PREDATOR SHOP</a>
+						</li>
+						<li>
+							<a href="#">16 TEAMS PRESENTATION</a>
+						</li>
+						<li>
+							<a href="#">CONTACT US</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="open_live_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog full-screen" role="document">
+			<div class="modal-content">
+				<div class="box-register">
+					<p class="title-register">Waiting Link Live</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal_youtube" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog full-screen" role="document">
+			<div class="modal-content">
+				<div class="box-youtube">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/classie.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		(function () {
+			var slideshow = new Slideshow(document.getElementById('information'));
+			var slideshow = new Slideshow(document.getElementById('front_live'));
+			var slideshow = new Slideshow(document.getElementById('predatorshop'));
+			var slideshow = new Slideshow(document.getElementById('tvscreen'));
+		})();
+		//$('.information_slideshow').hide();
+	</script>
+	<script>
+		$('#information_modal').on('hidden.bs.modal', function (e) {
+			$('.item--information .button.button--close').click();
+		})
+		$('#open_live_modal').on('hidden.bs.modal', function (e) {
+			$('.item--openlive .button.button--close').click();
+		})
+
+
+		function open_frontlive() {
+			$('.item--to-live .button.button--close').click();
+			$('.information_slideshow').addClass('hide_zoom');
+			$('.front_live_slideshow').addClass('open_zoomin');
+		}
+		function front_liveToInformation() {
+			$('.front_live_slideshow').removeClass('open_zoomin');
+			$('.information_slideshow').removeClass('hide_zoom');
+		}
+		function informationToShop() {
+			$('.information_slideshow').addClass('slide_right');
+			$('.shop_slideshow').addClass('slide_center');
+		}
+		function shopToInformation() {
+			$('.shop_slideshow').removeClass('slide_center');
+			$('.information_slideshow').removeClass('slide_right');
+		}
+		function informationToVideo() {
+			$('.information_slideshow').addClass('slide_left');
+			$('.tvscreen_slideshow').addClass('slide_center');
+		}
+		function tvscreenToInformation() {
+			$('.tvscreen_slideshow').removeClass('slide_center');
+			$('.information_slideshow').removeClass('slide_left');
+		}
+		$('[data-fancybox="video"]').fancybox({
+			afterClose: function (instance, current) {
+				$('.button.button--close').click();
+			}
+		});
+	</script>
+</body>
+
+</html>
