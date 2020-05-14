@@ -248,7 +248,8 @@ body {
 
 /*Amination*/
 
-.information_slideshow.hide_zoom, .shop_slideshow.hide_zoom {
+.information_slideshow.hide_zoom,
+.shop_slideshow.hide_zoom {
   -moz-opacity: 0;
   opacity: 0;
   -moz-transform: scale(1.9);
@@ -496,11 +497,11 @@ body {
 }
 
 .box-cotain-arrow-entrance img {
-  width: 80px;
-  animation-name: blinkimg;
+  width: 130px;
+  /* animation-name: blinkimg;
   animation-duration: 0.7s;
   animation-delay: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 .img-information-center {
   position: absolute;
@@ -537,7 +538,7 @@ body {
   width: 5vw;
   cursor: pointer;
 }
-.img-live-icon-right{
+.img-live-icon-right {
   position: absolute;
   top: 45%;
   left: 25%;
@@ -548,13 +549,13 @@ body {
   position: absolute;
   top: 55%;
   left: 20%;
-  width: 2.5vw;
+  width: 6vw;
 }
-.img-mouseshop-icon-right{
+.img-mouseshop-icon-right {
   position: absolute;
-  top: 55%;
-  left: 70%;
-  width: 2.5vw;
+  top: 53%;
+  left: 67%;
+  width: 6vw;
 }
 
 .img-live-icon-frontlive {
@@ -564,132 +565,146 @@ body {
   width: 7vw;
   cursor: pointer;
 }
-.img-youtube-link-1{
+.img-youtube-link-1 {
   position: absolute;
-  top: 37.5%;
-  left: 32.5%;
+  top: 42.8%;
+  left: 32.8%;
   width: 3.5vw;
 }
-.img-youtube-link-2{
+.img-youtube-link-2 {
   position: absolute;
-  top: 33.5%;
+  top: 37.5%;
   left: 68%;
   width: 3.5vw;
 }
-.img-youtube-link-3{
+.img-youtube-link-3 {
   position: absolute;
-  top: 60%;
-  left: 32.5%;
+  top: 68%;
+  left: 33%;
   width: 3.5vw;
 }
-.img-youtube-link-4{
+.img-youtube-link-4 {
   position: absolute;
-  top: 57.5%;
+  top: 65.5%;
   left: 68.5%;
   width: 3.5vw;
 }
-.img-notebook-left{
+.img-notebook-left {
   position: absolute;
   top: 60%;
   left: 10%;
   width: 2.5vw;
 }
-.img-notebook-center{
+.img-notebook-center {
   position: absolute;
   top: 60%;
   left: 45%;
   width: 2.5vw;
 }
-.img-notebook-right{
+.img-notebook-right {
   position: absolute;
   top: 60%;
   left: 78%;
   width: 2.5vw;
 }
-.box-triton300-close{
+.box-triton300-close, .box-triton500-close {
   position: absolute;
-  top:13%;
-  left: 80%;
+  top: 3%;
+  left: 78%;
   width: 50px;
   height: 50px;
 }
-.box-triton300{
+.box-triton300, .box-triton500 {
   position: absolute;
   top: 21%;
   left: 48%;
   width: 40%;
   height: 650px;
 }
-.box-triton300-buy{
+.box-triton300-buy, .box-triton500-buy {
   position: absolute;
-  top: 90%;
-  left: 60%;
-  width: 15%;
-  height: 7%;
+  bottom: 2.5%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
-.box-triton500-close{
+.box-triton300-buy img, .box-triton500-buy img{
+  width: 27%;
+}
+
+.box-heiios300-close {
   position: absolute;
-  top:13%;
-  left: 80%;
+  top: 3%;
+  left: 77%;
   width: 50px;
   height: 50px;
 }
-.box-triton500{
-  position: absolute;
-  top: 21%;
-  left: 48%;
-  width: 40%;
-  height: 650px;
-}
-.box-triton500-buy{
-  position: absolute;
-  top: 90%;
-  left: 60%;
-  width: 15%;
-  height: 7%;
-}
-.box-heiios300-close{
-  position: absolute;
-  top:13%;
-  left: 47%;
-  width: 50px;
-  height: 50px;
-}
-.box-heiios300{
+.box-heiios300 {
   position: absolute;
   top: 21%;
   left: 16%;
   width: 40%;
   height: 650px;
 }
-.box-heiios300-buy{
+.box-heiios300-buy {
   position: absolute;
-  top: 90%;
-  left: 27%;
-  width: 15%;
-  height: 7%;
+  bottom: 2.5%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
 }
-.nav-pills .nav-link.tab-pubg{
+.box-heiios300-buy img{
+  width: 27%;
+}
+.nav-pills .nav-link.tab-pubg {
   height: 63px;
   border-radius: 0;
   background-color: transparent;
 }
-.nav-pills .nav-link.tab-pubg.register{
-  background-image: url('../img/entrance/reg.jpg');
+.nav-pills .nav-link.tab-pubg.register {
+  background-image: url("../img/entrance/reg.jpg");
   background-size: 100% 100%;
 }
-.nav-pills .nav-link.tab-pubg.register.active{
-  background-image: url('../img/entrance/reg_active.jpg');
+.nav-pills .nav-link.tab-pubg.register.active {
+  background-image: url("../img/entrance/reg_active.jpg");
 }
-.nav-pills .nav-link.tab-pubg.login{
-  background-image: url('../img/entrance/login.jpg');
+.nav-pills .nav-link.tab-pubg.login {
+  background-image: url("../img/entrance/login.jpg");
   background-size: 100% 100%;
 }
-.nav-pills .nav-link.tab-pubg.login.active{
-  background-image: url('../img/entrance/login_active.jpg');
+.nav-pills .nav-link.tab-pubg.login.active {
+  background-image: url("../img/entrance/login_active.jpg");
 }
-.datepicker-container{
-  z-index: 1100!important;
+.datepicker-container {
+  z-index: 1100 !important;
+}
+.img-logout-icon {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  width: 50px;
+  height: auto;
+  z-index: 1200;
+}
+.modal-titon300, .modal-titon500{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 35%;
+}
+.modal-heiios300{
+  position: absolute;
+  top: 10%;
+  left: 18%;
+  width: 35%;
+}
+
+.modal-product{
+  width: 100%;
+  max-width: 100%;
 }
 @media (min-width: 576px) {
   .modal-dialog {
@@ -718,17 +733,45 @@ body {
   .contain-slideshow {
     display: none;
   }
+  .section-login{
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .tab-navigation .btn-nav p {
-    font-size: 12px;
+    display: none;
+  }
+  .tab-navigation .btn-nav .box-arrow{
+    width: 40px;
+    height: 40px;
+  }
+  .tab-navigation.tab-navigation-right .btn-nav.btn-nav-right{
+    align-items: flex-end;
+  }
+  .tab-navigation.tab-navigation-left .btn-nav.btn-nav-left{
+    align-items: flex-start;
+  }
+  .img-logout-icon{
+    width: 40px;
+  }
+  .box-triton300-close img, .box-triton500-close img{
+    width: 10px
+  }
+  .box-triton300-buy img, .box-triton500-buy img, .box-heiios300-buy img{
+    width: 32%;
+  }
+  .box-heiios300-close img{
+    width: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .contain-slideshow {
+    /* display: none; */
+    height: 40vh;
   }
 }
 @media (max-width: 911px) {
-  .contain-slideshow {
-    /* display: none; */
-    height: 100vh;
-  }
+  
   .modal-dialog.full-screen {
     height: auto;
   }
@@ -784,4 +827,19 @@ body {
   .item--openlive .item__img {
     width: 13vw;
   }
+  .tab-navigation .btn-nav .box-arrow{
+    width: 40px;
+    height: 40px;
+  }
+  .tab-navigation .btn-nav p{
+    font-size: 13px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1350px){
+  .contain-slideshow{
+    height: 560px;
+  }
+}
+@media (min-width: 1351px) and (max-width: 1600px){
+
 }

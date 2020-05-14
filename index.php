@@ -91,7 +91,7 @@ session_start();
 					<img src="./img/information/Live-Icon.png" class="animated flipInY infinite img-live-icon-left">
 				</a>
 				<a onclick=open_shopZoom();>
-					<img src="./img/entrance/arrow_mouse.png" class="animated flash infinite img-mouseshop-icon-left">
+					<img src="./img/circle2.png" class="animated zoomIn infinite img-mouseshop-icon-left">
 				</a>
 				<div class="tab-navigation tab-navigation-right">
 					<a onclick="shopToInformation();" class="btn-nav btn-nav-right">
@@ -137,7 +137,7 @@ session_start();
 					<img src="./img/information/Live-Icon.png" class="animated flipInY infinite img-live-icon-right">
 				</a>
 				<a onclick=open_mediaZoom();>
-					<img src="./img/entrance/arrow_mouse.png" class="animated flash infinite img-mouseshop-icon-right">
+					<img src="./img/circle2.png" class="animated zoomIn infinite img-mouseshop-icon-right">
 				</a>
 				<div class="tab-navigation tab-navigation-left">
 					<a onclick="tvscreenToInformation();" class="btn-nav btn-nav-left">
@@ -152,16 +152,16 @@ session_start();
 			<div class="relative">
 				<img src="./img/tvscreen/TV_2_UPDATE.jpg" class="img-full-bg" />
 				<a onclick="openYoutube(1);">
-					<img src="./img/tvscreen/icon_youtube.png" class="animated bounce infinite img-youtube-link-1">
+					<img src="./img/tvscreen/icon_youtube.png" class="img-youtube-link-1">
 				</a>
 				<a onclick="openYoutube(2);">
-					<img src="./img/tvscreen/icon_youtube.png" class="animated bounce infinite img-youtube-link-2">
+					<img src="./img/tvscreen/icon_youtube.png" class="img-youtube-link-2">
 				</a>
 				<a onclick="openYoutube(3);">
-					<img src="./img/tvscreen/icon_youtube.png" class="animated bounce infinite img-youtube-link-3">
+					<img src="./img/tvscreen/icon_youtube.png" class="img-youtube-link-3">
 				</a>
 				<a onclick="openYoutube(4);">
-					<img src="./img/tvscreen/icon_youtube.png" class="animated bounce infinite img-youtube-link-4">
+					<img src="./img/tvscreen/icon_youtube.png" class="img-youtube-link-4">
 				</a>
 				<div class="tab-navigation tab-navigation-left">
 					<a onclick="mediaToInformation();" class="btn-nav btn-nav-left">
@@ -174,62 +174,71 @@ session_start();
 		</div>
 		<div class="for-absolute product_left">
 			<div class="relative">
-				<img src="./img/product/titon300_left_mock.jpg" class="img-full-bg" />
-				<a href="https://www.acer.com/ac/en/ID/content/predator-series/predatortriton300" target="_blank">
-					<div class="box-triton300">
-
+				<img src="./img/product/titon300_left.jpg" class="img-full-bg" />
+								
+				<div class="modal-titon300">
+					<div class="relative">
+						<a href="https://www.acer.com/ac/en/ID/content/predator-series/predatortriton300" target="_blank">
+							<img src="./img/product/modal_triton300.png" class="modal-product">
+						</a>
+						<a onclick="closetiton300();">
+							<div class="box-triton300-close">
+								<img src="./img/product/close.png">
+							</div>
+						</a>
+						<a href="https://predatorthailand.com/all-model/" target="_blank">
+							<div class="box-triton300-buy">
+								<img src="./img/product/buy_btn.png">
+							</div>
+						</a>
 					</div>
-				</a>
-				<a href="https://predatorthailand.com/all-model/" target="_blank">
-					<div class="box-triton300-buy">
-
-					</div>
-				</a>
-				<a onclick="closetiton300();">
-					<div class="box-triton300-close">
-
-					</div>
-				</a>
+				</div>
+				
 			</div>
 		</div>
 		<div class="for-absolute product_center">
 			<div class="relative">
-				<img src="./img/product/titon500_center_mock.jpg" class="img-full-bg" />
-				<a href="https://predatorthailand.com/predator-triton-500/" target="_blank">
-					<div class="box-triton500">
-
+				<img src="./img/product/titon500_center.jpg" class="img-full-bg" />				
+				<div class="modal-titon500">
+					<div class="relative">
+						<a href="https://predatorthailand.com/predator-triton-500/" target="_blank">
+							<img src="./img/product/modal_triton500.png" class="modal-product">
+						</a>
+						<a onclick="closetiton500();">
+							<div class="box-triton500-close">
+								<img src="./img/product/close.png">
+							</div>
+						</a>
+						<a href="https://predatorthailand.com/all-model/" target="_blank">
+							<div class="box-triton500-buy">
+								<img src="./img/product/buy_btn.png">
+							</div>
+						</a>
 					</div>
-				</a>
-				<a href="https://predatorthailand.com/all-model/#filter=.g-triton-500" target="_blank">
-					<div class="box-triton500-buy">
-
-					</div>
-				</a>
-				<a onclick="closetiton500();">
-					<div class="box-triton500-close">
-
-					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 		<div class="for-absolute product_right">
 			<div class="relative">
-				<img src="./img/product/heiios300_right_mock.jpg" class="img-full-bg" />
-				<a href="https://predatorthailand.com/helios-300/" target="_blank">
-					<div class="box-heiios300">
-
+				<img src="./img/product/heiios300_right.jpg" class="img-full-bg" />
+				
+				<div class="modal-heiios300">
+					<div class="relative">
+						<a href="https://predatorthailand.com/helios-300/" target="_blank">
+							<img src="./img/product/modal_triton500.png" class="modal-product">
+						</a>
+						<a onclick="closeheiios300();">
+							<div class="box-heiios300-close">
+								<img src="./img/product/close.png">
+							</div>
+						</a>
+						<a href="https://predatorthailand.com/all-model/#filter=.g-helios-300" target="_blank">
+							<div class="box-heiios300-buy">
+								<img src="./img/product/buy_btn.png">
+							</div>
+						</a>
 					</div>
-				</a>
-				<a href="https://predatorthailand.com/all-model/#filter=.g-helios-300" target="_blank">
-					<div class="box-heiios300-buy">
-
-					</div>
-				</a>
-				<a onclick="closeheiios300();">
-					<div class="box-heiios300-close">
-
-					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -258,6 +267,9 @@ session_start();
 			</div>
 		</div>
 	</div>
+	<a href="logout.php">
+		<img src="./img/outlout_icon.png" class="img-logout-icon">
+	</a>
 	<div class="modal fade" id="open_live_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 		aria-hidden="true">
 		<div class="modal-dialog full-screen" role="document">
@@ -280,9 +292,12 @@ session_start();
 	</div>
 	<input type="hidden" class="username" value="<?php if (isset($_SESSION['username'])) {
                                                         echo $_SESSION['username'];
+													  } ?>" />
+	<input type="hidden" class="userid" value="<?php if (isset($_SESSION['userid'])) {
+                                                        echo $_SESSION['userid'];
                                                       } ?>" />
 	<script>		
-		var getSession = $(".username").val();
+		var getSession = $(".username").val();		
 		if(getSession != "canAccess"){
 			window.location.href = "login.php";
 		}
@@ -419,6 +434,32 @@ session_start();
 			$('.shop_predator').fadeIn(500);
 			$('.product_right').hide();
 		}
+	</script>
+	<script>
+		function view(){
+			var valuserid = $('.userid').val();
+			if(valuserid != ''){
+				$.ajax({
+				  url: 'view.php',
+				  method: 'POST',
+				  data: {
+				    valuserid: valuserid,
+				  },
+				  success: function (data) {
+				      if (data == 'success') {                    
+						//alert('add view')
+				      }                  
+				      else if (data == 'error') {
+						//alert('error')
+				      }
+				      else {
+						//alert('error')
+				      }
+				  }
+				})
+			}			
+		}
+		view();
 	</script>
 </body>
 

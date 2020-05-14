@@ -23,13 +23,14 @@
 </head>
 
 <body>
+<p class="landscap-txt"><span>รับชมในแนวนอน</span> <br>(Watch in landscape)</p>
 	<div class="section-login">
 		<div class="absolute-contain-bg-img">
 			<div class="relative-contain-bg-img">
 				<img src="./img/entrance/entrance.jpg" class="img-full-bg">
 				<a data-toggle="modal" data-target="#resgiterfrm">
-					<div class="box-cotain-arrow-entrance">
-						<img src="./img/entrance/arrow_mouse.png" />
+					<div class="box-cotain-arrow-entrance animated zoomIn infinite" >
+						<img src="./img/circle2.png" />
 					</div>
 				</a>
 			</div>
@@ -100,7 +101,7 @@
 									<img src="./img/icon_pre_reg.png" class="img-fluid">
 								</div>
 								<div class="col-5 align-items-center">
-									<a href="main.html" class="">
+									<a class="" onclick="regclk();">
 										<img src="./img/entrance/reg_btn.jpg">
 									</a>
 								</div>
@@ -127,7 +128,7 @@
 									<img src="./img/icon_pre_reg.png" class="img-fluid">
 								</div>
 								<div class="col-5 align-items-center">
-									<a href="main.html" class="">
+									<a class="" onclick="loginclk();">
 										<img src="./img/entrance/btn_login.png">
 									</a>
 								</div>
@@ -151,6 +152,140 @@
 		$('[data-toggle="datepicker"]').datepicker({
 			format: 'dd-mm-yyyy'
 		});
+		function regclk(){
+			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			var user_name = $('#inputname').val();
+			var user_surname = $('#inputsurname').val();
+			var user_dob = $('#inputdob').val();
+			var user_email = $('#inputemail').val();
+			if(user_name == ''|| user_surname == ''|| user_dob == ''|| user_email == ''){				
+				Swal.fire(
+					'ผิดพลาด!',
+					'กรุณากรอกข้อมูลให้ครบถ้วน',
+					'error'
+					)
+			}else if (user_email.match(mailformat)){
+				if($('#checkaccept').is(':checked')){
+					$.ajax({
+						url: 'register_post.php',
+						method: 'POST',
+						data: {
+							user_name: user_name,
+							user_surname: user_surname,
+							user_dob: user_dob,
+							user_email: user_email,
+						},
+						success: function (data) {
+							if (data == 'success') {   
+								Swal.fire(
+									'สำเร็จ',
+									'ลงทะเบียนสำเร็จ',
+									'success'
+								).then((result)=>{
+									if(result.value){
+										window.location.href = 'index.php';
+									}
+								})             
+							}
+							else if (data == 'havedata') {								
+								Swal.fire(
+									'ผิดพลาด!',
+									'อีเมลล์ถูกใช้แล้ว',
+									'error'
+								)
+							}
+							else if (data == 'error') {								
+								Swal.fire(
+									'ผิดพลาด!',
+									'มีบางอย่างผิดพลาด กรุณาลองอีกครั้ง',
+									'error'
+								)
+							}
+							else {
+								Swal.fire(
+									'ผิดพลาด!',
+									'มีบางอย่างผิดพลาด กรุณาลองอีกครั้ง',
+									'error'
+								)
+							}
+						}
+					})
+				}else{
+					Swal.fire(
+					'ผิดพลาด!',
+					'กรุณายอมรับข้อตกลง',
+					'error'
+					)
+				}
+			}else{
+				Swal.fire(
+					'ผิดพลาด!',
+					'อีเมลไม่ถูกต้อง',
+					'error'
+				)
+			}
+			
+		}
+
+		function loginclk(){
+			var l_user_email = $('#inputemail_login').val();
+			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			if(l_user_email == ''){
+				Swal.fire(
+					'ผิดพลาด!',
+					'กรุณากรอกข้อมูลให้ครบถ้วน',
+					'error'
+				)
+			}else if(l_user_email.match(mailformat)){
+				$.ajax({
+					url: 'login_post.php',
+					method: 'POST',
+					data: {
+						l_user_email: l_user_email,
+					},
+					success: function (data) {
+						if (data == 'success') {                    
+							Swal.fire(
+								'สำเร็จ',
+								'เข้าสู่ระบบสำเร็จ',
+								'success'
+							).then((result)=>{
+								if(result.value){
+									window.location.href = 'index.php';
+								}
+							})
+						}
+						else if (data == 'nodata') {							
+							Swal.fire(
+								'ผิดพลาด!',
+								'อีเมลนี้ยังไม่ถูกลงทะเบียน',
+								'error'
+							)
+						}
+						else if (data == 'error') {
+							Swal.fire(
+								'ผิดพลาด!',
+								'มีบางอย่างผิดพลาด กรุณาลองอีกครั้ง',
+								'error'
+							)
+						}
+						else {
+							Swal.fire(
+								'ผิดพลาด!',
+								'มีบางอย่างผิดพลาด กรุณาลองอีกครั้ง',
+								'error'
+							)
+						}
+					}
+				})
+			}else{
+				Swal.fire(
+					'ผิดพลาด!',
+					'อีเมลไม่ถูกต้อง',
+					'error'
+				)
+			}
+		}
 	</script>
 </body>
 
