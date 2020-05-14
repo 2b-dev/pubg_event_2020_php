@@ -10,6 +10,11 @@ session_start();
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:url"           content="https://www.virtualeventthailand.com/predator-pcs/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Predator - PUBG Continental Series-APAC Charity Showdown" />
+    <meta property="og:description"   content="พรีเดเตอร์ รวมพลคนอีสปอร์ตทำดี สู้โควิด-19 ในศึก PUBG Continental Series – APAC Charity Showdown  เงินรางวัลรวมกว่า 6 ล้านบาท พร้อมประเดิมประสบการณ์เวอร์ชวลอีเวนท์ครั้งแรกในโลกอีสปอร์ต" />
+    <meta property="og:image"         content="" />
 	<title>PUBG</title>
 	<meta name="description" content="PUBG" />
 	<meta name="keywords" content="PUBG" />
@@ -42,7 +47,7 @@ session_start();
 				<img src="./img/information/information_center.jpg" class="img-full-bg" />
 				<a data-toggle="modal" data-target="#information_modal">
 					<img src="./img/information/Information_icon.png"
-						class="animated bounce infinite img-information-center" />
+						class="img-information-center" />
 				</a>
 				<a onclick=open_frontlive();>
 					<img src="./img/information/Live-Icon.png" class="animated flipInY infinite img-live-icon-center">
@@ -85,7 +90,7 @@ session_start();
 				<img src="./img/shop/information_left.jpg" class="img-full-bg" />
 				<a data-toggle="modal" data-target="#information_modal">
 					<img src="./img/information/Information_icon.png"
-						class="animated bounce infinite img-information-left" />
+						class="img-information-left" />
 				</a>
 				<a onclick=open_frontliveformleft();>
 					<img src="./img/information/Live-Icon.png" class="animated flipInY infinite img-live-icon-left">
@@ -106,16 +111,16 @@ session_start();
 			<div class="relative">
 				<img src="./img/shop/shop_predator.jpg" class="img-full-bg" />
 				<a onclick="product_left();">
-					<img src="./img/information/Information_icon.png"
-						class="animated bounce infinite img-notebook-left">
+					<img src="./img/product/i.png"
+						class="img-notebook-left">
 				</a>
 				<a onclick="product_center();">
-					<img src="./img/information/Information_icon.png"
-						class="animated bounce infinite img-notebook-center">
+					<img src="./img/product/i.png"
+						class="img-notebook-center">
 				</a>
 				<a onclick="product_right();">
-					<img src="./img/information/Information_icon.png"
-						class="animated bounce infinite img-notebook-right">
+					<img src="./img/product/i.png"
+						class="img-notebook-right">
 				</a>
 				<div class="tab-navigation tab-navigation-right">
 					<a onclick="predatorToInformation();" class="btn-nav btn-nav-right">
@@ -131,7 +136,7 @@ session_start();
 				<img src="./img/tvscreen/information_right.jpg" class="img-full-bg" />
 				<a data-toggle="modal" data-target="#information_modal">
 					<img src="./img/information/Information_icon.png"
-						class="animated bounce infinite img-information-right" />
+						class="img-information-right" />
 				</a>
 				<a onclick=open_frontliveformright();>
 					<img src="./img/information/Live-Icon.png" class="animated flipInY infinite img-live-icon-right">
@@ -150,18 +155,18 @@ session_start();
 		</div>
 		<div class="for-absolute media_show">
 			<div class="relative">
-				<img src="./img/tvscreen/TV_2_UPDATE.jpg" class="img-full-bg" />
+				<img src="./img/tvscreen/TV_2.jpg" class="img-full-bg" />
 				<a onclick="openYoutube(1);">
-					<img src="./img/tvscreen/icon_youtube.png" class="img-youtube-link-1">
+					<img src="./img/tvscreen/link1.png" class="img-youtube-link-1">
 				</a>
 				<a onclick="openYoutube(2);">
-					<img src="./img/tvscreen/icon_youtube.png" class="img-youtube-link-2">
+					<img src="./img/tvscreen/link2.png" class="img-youtube-link-2">
 				</a>
 				<a onclick="openYoutube(3);">
-					<img src="./img/tvscreen/icon_youtube.png" class="img-youtube-link-3">
+					<img src="./img/tvscreen/link3.png" class="img-youtube-link-3">
 				</a>
 				<a onclick="openYoutube(4);">
-					<img src="./img/tvscreen/icon_youtube.png" class="img-youtube-link-4">
+					<img src="./img/tvscreen/link4.png" class="img-youtube-link-4">
 				</a>
 				<div class="tab-navigation tab-navigation-left">
 					<a onclick="mediaToInformation();" class="btn-nav btn-nav-left">
@@ -242,6 +247,10 @@ session_start();
 			</div>
 		</div>
 	</div>
+	<audio controls autoplay loop class="sound-player">
+		<source src="./sound.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
 	<div class="modal fade" id="information_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 		aria-hidden="true">
 		<div class="modal-dialog full-screen" role="document">
